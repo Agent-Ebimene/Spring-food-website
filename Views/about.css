@@ -1,0 +1,167 @@
+@import url("../CSS/main.css");
+
+/*
+===========
+About Menu
+==========
+*/
+.about-close-btn {
+  color: var(--aboutFooterColor);
+}
+.about-menu a:hover {
+  color: var(--aboutFooterColor);
+}
+/*
+=============
+About Hero
+=============
+*/
+.about-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/hero_about_us.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.about-hero-section h1,
+h3 {
+  color: var(--clr-white);
+}
+.about-hero-text {
+  margin-top: 2rem;
+}
+.about-divider {
+  background: grey;
+  margin-top: 2rem;
+  transform: rotate(90deg);
+}
+.about-detail {
+  color: var(--aboutFooterColor);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  .about-divider {
+    transform: rotate(180deg);
+  }
+}
+/*
+===============
+Story Section
+===============
+*/
+
+.story-section {
+  padding: 1.6rem;
+  background: var(--cardBoxColor);
+}
+.story-header {
+  font-family: var(--aboutStoryColor);
+  color: var(--blackColor);
+  font-size: 4rem;
+  font-weight: 400;
+  margin-block: 3rem;
+}
+.story-section h1,
+h5 {
+  margin-top: 2rem;
+  font-family: var(--aboutStoryColor);
+  color: var(--blackColor);
+  text-transform: unset;
+  font-weight: 400;
+}
+.story-section p {
+  line-height: 1.5;
+}
+.story-section h5 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+.story-section span {
+  color: var(--aboutFooterColor);
+}
+.story-img-box {
+  object-fit: cover;
+  width: 100%;
+}
+.story-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .story-section {
+    padding-inline: 4rem;
+  }
+  .about-story {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .story-text-box {
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+  }
+  .story-img {
+    min-height: 450px;
+    max-width: 500px;
+    object-fit: cover;
+  }
+  .ingredient-img {
+    order: 1;
+  }
+}
+.about-shop-box {
+  width: 200px;
+  border: 2px solid var(--aboutFooterColor);
+  background: var(--aboutStoryColor);
+  display: block;
+}
+.about-shop-link {
+  color: var(--aboutFooterColor);
+  text-align: center;
+  transition: var(--transition);
+  background: var(--cardBoxColor);
+}
+.about-shop-link:hover {
+  color: var(--clr-white);
+  background: var(--aboutFooterColor);
+}
+.about-page-underline {
+  background: gray;
+}
+/*
+==============
+About Footer
+==============
+*/
+.about-footer {
+  background: var(--aboutFooterColor);
+  padding-top: 2rem;
+  color: var(--clr-white);
+}
+.about-subscribe {
+  color: var(--clr-white);
+  background: var(--blackColor);
+}
+.about-footer-icon {
+  color: var(--aboutFooterColor);
+}
+.about-icon-box {
+  background: var(--clr-white);
+}
+.about-icon-box:hover {
+  background: var(--aboutFooterColor);
+}
+.about-icon-box:hover .about-footer-icon {
+  color: var(--clr-white);
+}
