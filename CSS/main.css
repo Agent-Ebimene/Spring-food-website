@@ -479,7 +479,10 @@ Customer Favorites
   transition: var(--transition);
   margin-bottom: 2rem;
 }
-
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
 .single-product:hover {
   box-shadow: 0 10px 10px -5px grey;
 }
@@ -557,7 +560,6 @@ Customer Favorites
 
 @media screen and (min-width: 1024px) {
   .customer-section {
-    padding-inline: 20%;
   }
 }
 
