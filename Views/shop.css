@@ -12,6 +12,9 @@
 body {
   background: var(--shopBgColor);
 }
+.shop-menu-box p {
+  color: var(--aboutFooterColor);
+}
 .shop-items {
   margin-top: 3rem;
 }
@@ -39,6 +42,7 @@ body {
   justify-content: center;
   margin-block: 2rem;
   gap: 0.6rem;
+  z-index: 1;
 }
 
 .page-nav-box {
@@ -89,28 +93,50 @@ Sorting Section
 .sorting-section {
   padding-inline: 1.5rem;
   margin-top: 5rem;
+  position: relative;
 }
 .sorting-section p {
   color: var(--textColor);
   font-size: 1.2rem;
 }
-.sorting-section input {
+.sorting-section button {
   height: 40px;
   width: 100%;
   padding: 1.5rem;
-  color: #e5e5e5;
-  border: 0.5px solid #e5e5e5;
+  display: flex;
+  transition: var(--transition);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--textColor);
+  border: none;
   border-radius: 3px;
   font-size: 1rem;
 }
-
+.sorting-section:hover .sorting-list {
+  display: block;
+}
+.sorting-list {
+  display: none;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  transition: var(--transition);
+  border-radius: 5px;
+  background: #e5e5e5;
+  padding-left: 1rem;
+}
+.sorting-list li {
+  margin-block: 1rem;
+  font-size: 1.2rem;
+}
 @media screen and (min-width: 900px) {
   .sorting-section {
     display: flex;
     justify-content: center;
     gap: 2rem;
   }
-  .sorting-section input {
+  .sorting-section button {
     width: 450px;
   }
 }

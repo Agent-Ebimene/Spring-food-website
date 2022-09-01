@@ -18,12 +18,12 @@ About Hero
 */
 .about-hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../images/hero_about_us.jpg") no-repeat center center fixed;
+    url("../images/about-bg.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 430px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -38,13 +38,16 @@ h3 {
 }
 .about-divider {
   background: grey;
+  width: 0.1px;
   margin-top: 2rem;
+  height: 100%;
   transform: rotate(90deg);
 }
 .about-detail {
   color: var(--aboutFooterColor);
   font-size: 1.5rem;
   text-align: center;
+  padding-inline: 1rem;
 }
 
 @media screen and (min-width: 760px) {
@@ -67,7 +70,7 @@ Story Section
   color: var(--blackColor);
   font-size: 4rem;
   font-weight: 400;
-  margin-block: 3rem;
+  margin-bottom: 1.5rem;
 }
 .story-section h1,
 h5 {

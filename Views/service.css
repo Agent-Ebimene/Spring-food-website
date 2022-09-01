@@ -1,9 +1,8 @@
 @import url("../CSS/main.css");
 @import url("../Views/about.css");
-
 .service-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../images/hero_services.jpg") no-repeat center center fixed;
+    url("../images/about-bg.jpeg") no-repeat center center fixed;
 }
 .service-hero-text {
   text-align: center;
@@ -101,8 +100,16 @@ Service Items
   flex-direction: column;
   align-items: center; */
 }
+
+.service-item p {
+  color: var(--aboutFooterColor);
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: justify;
+}
+
 .service-item-img-box {
-  min-width: 350px;
+  min-width: 330px;
   object-fit: cover;
 }
 .service-item-img {

@@ -72,7 +72,7 @@ h4 {
   font-weight: bold;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--bigHeaderFont);
 }
 h2 {
@@ -105,6 +105,7 @@ Nav section
   gap: 1rem;
   background: var(--clr-white);
   height: 60px;
+  z-index: 2;
 }
 .desktop-nav-list {
   display: none;
@@ -129,11 +130,17 @@ Nav section
   height: 2px;
   background: var(--blackColor);
 }
-.logo-img {
-  width: 80px;
-  height: 50px;
-  margin-top: -0.8rem;
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-box p,
+.menu-logo-box p {
   cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: -0.1rem;
+  color: var(--primaryColor);
 }
 
 @media screen and (min-width: 900px) {
@@ -226,7 +233,8 @@ Banner section
   width: 100%;
   padding: 0 6%;
   min-height: 100vh;
-  background: url("../images/hero_home_03.jpg") no-repeat center center scroll;
+  background: linear-gradient(to right, #2b5876, #4e4376),
+    url("../images/hero_home_03.jpeg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -238,7 +246,9 @@ Banner section
 .banner-header {
   color: var(--primaryColor);
   font-family: var(--bigHeaderFont);
+  text-align: center;
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .home-text {
   color: var(--primaryColor);
@@ -246,6 +256,7 @@ Banner section
   max-width: 28rem;
   font-weight: bold;
   margin-top: 2rem;
+  line-height: 1.8;
 }
 .btn-container {
   background: var(--secondaryColor);
@@ -290,6 +301,7 @@ Delivery Section
 .section-header {
   color: var(--primaryColor);
   font-family: var(--bigHeaderFont);
+  font-weight: 400;
   word-spacing: -2px;
   margin-bottom: 1rem;
   text-align: center;
@@ -321,6 +333,7 @@ Delivery Section
 .single-delivery-detail p {
   max-width: 28rem;
   text-align: center;
+  line-height: 1.5;
 }
 .divider {
   width: 2px;
@@ -379,6 +392,7 @@ Info Section
 .info-header {
   font-family: var(--bigHeaderFont);
   text-align: center;
+  font-weight: normal;
   color: var(--primaryColor);
   margin-bottom: 3rem;
 }
@@ -443,6 +457,7 @@ Customer Favorites
   width: 100%;
   padding-block: 10%;
 }
+
 .customer-favorite-link {
   background: var(--clr-white);
   border: 2px solid var(--primaryColor);
@@ -455,6 +470,8 @@ Customer Favorites
   background: var(--primaryColor);
   color: var(--clr-white);
 }
+/*Products*/
+
 .single-product {
   background: var(--firstCardColor);
   width: 100%;
@@ -527,6 +544,22 @@ Customer Favorites
 .cart-btn:hover {
   box-shadow: 0 5px 10px -5px grey;
 }
+@media screen and (min-width: 900px) {
+  .home-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+  .single-product {
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .customer-section {
+    padding-inline: 20%;
+  }
+}
 
 /*
 ==============
@@ -563,6 +596,7 @@ Footer Section
   font-family: "IBM Plex Serif", Arial, Helvetica, sans-serif;
   font-style: italic;
   font-size: 1.2rem;
+  margin-block: 1rem;
 }
 .footer-header {
   color: var(--secondaryColor);
@@ -586,7 +620,7 @@ Footer Section
 .subscribe-btn-container {
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-block: 0.5rem;
 }
 .subscribe-btn {
   cursor: pointer;
@@ -597,6 +631,39 @@ Footer Section
   border: none;
   color: var(--primaryColor);
   font-weight: bold;
+}
+/*
+===========
+Faq Section
+===========
+*/
+.faq-section {
+  padding-inline: 1.5rem;
+}
+.question-header {
+  margin-block: 1rem;
+  text-transform: unset;
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.single-question p {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 760px) {
+  .faq-section h2 {
+    text-align: center;
+  }
+  .faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .faq-section p {
+    text-align: justify;
+  }
 }
 
 /*
@@ -636,12 +703,17 @@ Footer Icons
 }
 
 .footer-list li {
-  margin-top: 0.5rem;
+  margin-block: 1rem;
+  font-size: 1.2rem;
 }
 .footer-list a {
   color: var(--clr-white);
 }
-
+.footer-contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .footer-icon-box {
   width: 30px;
   height: 30px;
@@ -674,14 +746,15 @@ Footer Icons
 }
 
 @media screen and (min-width: 760px) {
-  .footer-items-box {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
   .subscribe-form {
     display: flex;
     justify-content: center;
+  }
+  .footer-list {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
   }
   .email-address {
     border-radius: 5px 0 0 5px;
